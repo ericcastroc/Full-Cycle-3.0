@@ -48,3 +48,5 @@ docker run --rm seu-user/fullcycle
 ## 🎯 Objetivo do Desafio
 
 Criar uma imagem Docker pequena e eficiente utilizando Go, garantindo que tenha menos de 2MB.
+
+#### 📥 Link para a imagem Docker: [Docker Hub - FullCycle Desafio GO](https://hub.docker.com/r/ericcastroc/fullcycle-desafio-go)
