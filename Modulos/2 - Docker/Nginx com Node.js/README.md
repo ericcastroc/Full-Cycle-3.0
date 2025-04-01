@@ -15,7 +15,7 @@ Este projeto demonstra como usar Nginx como proxy reverso para uma aplicação N
 ### 1️⃣ Clone o Repositório
 
 ```sh
-git clone https://github.com/seu-usuario/fullcycle-nginx-node.git
+git clone https://github.com/ericcastroc/Full-Cycle-3.0.git
 cd fullcycle-nginx-node
 ```
 
