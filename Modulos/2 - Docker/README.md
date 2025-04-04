@@ -1,6 +1,6 @@
 # 📦 Docker e Docker Compose
 
-Este repositório contém informações detalhadas sobre **Docker** e **Docker Compose**, explicando como utilizá-los para gerenciar containers de forma eficiente. 
+Este repositório contém informações detalhadas sobre **Docker** e **Docker Compose**, explicando como utilizá-los para gerenciar containers de forma eficiente.
 
 ---
 
@@ -9,6 +9,7 @@ Este repositório contém informações detalhadas sobre **Docker** e **Docker C
 Docker é uma plataforma que permite criar, implantar e executar aplicações em containers. Containers são ambientes isolados que contêm tudo o que uma aplicação precisa para rodar, incluindo o sistema operacional, bibliotecas e dependências.
 
 ✅ **Principais vantagens do Docker:**
+
 - Padronização de ambientes
 - Facilidade na distribuição de aplicações
 - Rápido provisionamento de ambientes
@@ -22,6 +23,7 @@ Docker é uma plataforma que permite criar, implantar e executar aplicações em
 Para instalar o Docker, siga as instruções do site oficial: [Docker Docs](https://docs.docker.com/get-docker/)
 
 - **Linux:**
+
 ```sh
 sudo apt update && sudo apt install docker.io -y
 sudo systemctl start docker
@@ -32,6 +34,7 @@ sudo systemctl enable docker
 Baixe e instale o **Docker Desktop**: [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
 Verifique a instalação:
+
 ```sh
 docker --version
 ```
@@ -43,33 +46,39 @@ docker --version
 Após instalar o Docker, você pode rodar alguns comandos essenciais:
 
 ### 🔍 Verificando o funcionamento
+
 ```sh
 docker run hello-world
 ```
 
 ### 📜 Listando containers
+
 ```sh
 docker ps               # Lista containers em execução
 docker ps -a            # Lista todos os containers (parados e em execução)
 ```
 
 ### ▶️ Iniciando e Parando Containers
+
 ```sh
 docker start <container_id>
 docker stop <container_id>
 ```
 
 ### 🗑️ Removendo Containers
+
 ```sh
 docker rm <container_id>
 ```
 
 ### 🔍 Listando Imagens
+
 ```sh
 docker images
 ```
 
 ### 🛠️ Removendo Imagens
+
 ```sh
 docker rmi <image_id>
 ```
@@ -83,6 +92,7 @@ docker rmi <image_id>
 Um **Dockerfile** é um arquivo que contém instruções para criar uma imagem Docker.
 
 Exemplo de **Dockerfile** para uma aplicação Node.js:
+
 ```dockerfile
 # Usando uma imagem base do Node.js
 FROM node:18
@@ -103,11 +113,13 @@ CMD ["node", "index.js"]
 ```
 
 ### 📍 Construindo uma Imagem
+
 ```sh
 docker build -t minha-imagem .
 ```
 
 ### 📍 Executando um Container
+
 ```sh
 docker run -d -p 3000:3000 --name meu-container minha-imagem
 ```
@@ -119,6 +131,7 @@ docker run -d -p 3000:3000 --name meu-container minha-imagem
 O **Docker Compose** é uma ferramenta para definir e gerenciar aplicações multi-container usando um único arquivo **docker-compose.yml**.
 
 ✅ **Vantagens do Docker Compose:**
+
 - Facilita a orquestração de múltiplos containers
 - Evita longos comandos Docker
 - Permite configurar dependências como bancos de dados e cache
@@ -132,6 +145,7 @@ sudo apt install docker-compose -y
 ```
 
 Verifique a instalação:
+
 ```sh
 docker-compose --version
 ```
@@ -172,21 +186,25 @@ services:
 ```
 
 ### 📍 Subindo os Containers
+
 ```sh
 docker-compose up -d
 ```
 
 ### 📍 Parando os Containers
+
 ```sh
 docker-compose down
 ```
 
 ### 📍 Verificando os Logs
+
 ```sh
 docker-compose logs -f
 ```
 
 ### 📍 Reiniciando um Serviço
+
 ```sh
 docker-compose restart app
 ```
@@ -206,7 +224,8 @@ docker-compose restart app
 ✅ Utilize **multi-stage builds** para reduzir o tamanho das imagens
 
 Exemplo de `.dockerignore`:
-```
+
+```sh
 node_modules
 npm-debug.log
 .env
@@ -218,5 +237,3 @@ dist
 ## 🎯 Conclusão
 
 O Docker facilita a criação e gestão de ambientes isolados, enquanto o Docker Compose simplifica a orquestração de múltiplos containers. Com essas ferramentas, podemos criar aplicações escaláveis e portáteis de maneira eficiente. 🚀
-
-
