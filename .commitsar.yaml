@@ -1,0 +1,6 @@
+commit:
+  ignorePaths:
+    - "node_modules/"
+    - "commitlint.config.js"
+    - "package.json"
+    - "package-lock.json"
